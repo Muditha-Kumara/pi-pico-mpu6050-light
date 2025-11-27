@@ -9,8 +9,8 @@
 	(paper "A4")
 	(title_block
 		(title "Internship Technical Test Assignment")
-		(date "2025-11-26")
-		(rev "1")
+		(date "2025-11-27")
+		(rev "1.0")
 		(company "Yens & Yens")
 	)
 	(layers
@@ -8975,6 +8975,30 @@
 			(justify left bottom mirror)
 		)
 	)
+	(gr_text "5VDC In"
+		(at 107.2965 110.5 -90)
+		(layer "B.SilkS")
+		(uuid "37c451cf-4181-4b41-bd5d-f40802fe76eb")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "GND"
+		(at 130.2965 116 -90)
+		(layer "B.SilkS")
+		(uuid "6f5d92eb-cd23-4b60-9222-61b08593f473")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom mirror)
+		)
+	)
 	(gr_text "pico\nUSB"
 		(at 107 56 0)
 		(layer "B.SilkS")
@@ -9001,6 +9025,42 @@
 			(justify bottom mirror)
 		)
 	)
+	(gr_text "SDA"
+		(at 133.5 54.05 -90)
+		(layer "B.SilkS")
+		(uuid "9c61eb5a-aaf5-4913-bd56-8e243eed3dce")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "GND"
+		(at 135.5 54.05 -90)
+		(layer "B.SilkS")
+		(uuid "9f41a97c-53d5-4243-8c6f-62844fb909a9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "(2025-11-27)"
+		(at 106 85 270)
+		(layer "B.SilkS")
+		(uuid "b576ad9d-a2c9-4a8c-b1c1-d610c1e4da59")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom mirror)
+		)
+	)
 	(gr_text "V 1.0"
 		(at 108 83.613334 270)
 		(layer "B.SilkS")
@@ -9010,6 +9070,30 @@
 				(size 2 2)
 				(thickness 0.4)
 				(bold yes)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "3.3VDC\nOut"
+		(at 128 53 -90)
+		(layer "B.SilkS")
+		(uuid "b6580bd9-bb69-47d9-a3bd-aed6fcd21fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify bottom mirror)
+		)
+	)
+	(gr_text "5VDC Out"
+		(at 134.2965 116 -90)
+		(layer "B.SilkS")
+		(uuid "b95ca4e8-c4ef-4549-a2d0-78c24c101a53")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
 			)
 			(justify left bottom mirror)
 		)
@@ -9025,6 +9109,42 @@
 				(bold yes)
 			)
 			(justify bottom mirror)
+		)
+	)
+	(gr_text "GND"
+		(at 107.2965 117.5 -90)
+		(layer "B.SilkS")
+		(uuid "d8c4be4e-200d-4bf4-935a-63a7905ed380")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "SCL"
+		(at 131.5 54.05 -90)
+		(layer "B.SilkS")
+		(uuid "dc67eed5-e5a6-4724-bcc1-33e6763bc6f1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "Din"
+		(at 132.2965 116 -90)
+		(layer "B.SilkS")
+		(uuid "e05c0525-c301-4869-b8fc-9620bb5b3879")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom mirror)
 		)
 	)
 	(gr_text "5VDC In"
