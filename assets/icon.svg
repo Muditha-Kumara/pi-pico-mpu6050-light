@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" role="img" aria-labelledby="title desc">
+  <title id="title">Motion Light Pico Hat Icon</title>
+  <desc id="desc">Stylized RP2040 board with flowing LED wave animation.</desc>
+  <defs>
+    <linearGradient id="gradBoard" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#243949"/>
+      <stop offset="100%" stop-color="#1e2833"/>
+    </linearGradient>
+    <linearGradient id="gradFlow" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#007cf0"/>
+      <stop offset="50%" stop-color="#00dfd8"/>
+      <stop offset="100%" stop-color="#007cf0"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect x="10" y="10" width="300" height="160" rx="16" fill="url(#gradBoard)" stroke="#00dfd8" stroke-width="3"/>
+
+  <!-- RP2040 chip representation -->
+  <rect x="60" y="50" width="70" height="70" rx="8" fill="#2e3f4d" stroke="#7fc7ff" stroke-width="2"/>
+  <text x="95" y="92" font-family="monospace" font-size="18" text-anchor="middle" fill="#7fc7ff">RP2040</text>
+
+  <!-- LED wave path -->
+  <path d="M150 120 C170 60 210 60 230 120 S290 180 310 80" fill="none" stroke="url(#gradFlow)" stroke-width="12" stroke-linecap="round" filter="url(#glow)"/>
+
+  <!-- LED nodes -->
+  <g>
+    <circle cx="160" cy="108" r="6" fill="#00dfd8"/>
+    <circle cx="185" cy="80" r="5" fill="#29f0ff"/>
+    <circle cx="210" cy="78" r="5" fill="#00dfd8"/>
+    <circle cx="235" cy="108" r="6" fill="#29f0ff"/>
+    <circle cx="260" cy="140" r="5" fill="#00dfd8"/>
+    <circle cx="285" cy="110" r="5" fill="#29f0ff"/>
+  </g>
+
+  <!-- Title overlay -->
+  <text x="160" y="30" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="22" text-anchor="middle" fill="#00dfd8" font-weight="600">Motion Light Pico Hat</text>
+</svg>
