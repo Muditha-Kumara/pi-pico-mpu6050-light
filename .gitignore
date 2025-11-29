@@ -39,3 +39,20 @@
 
 # debug information files
 *.dwo
+
+# PlatformIO
+.pio/
+.vscode/
+
+# KiCad auto-save and temporary files
+_autosave-*
+*.kicad_*~
+~*.kicad_sch.lck
+~*.kicad_pcb.lck
+*.kicad_prl
+fp-info-cache
+*-backups/
+
+# Documentation (optional - uncomment if you don't want to track PDFs)
+*.pdf
+*.md
