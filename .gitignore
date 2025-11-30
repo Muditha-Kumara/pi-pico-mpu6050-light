@@ -55,4 +55,4 @@ fp-info-cache
 
 # Documentation (optional - uncomment if you don't want to track PDFs)
 *.pdf
-*.md
+#*.md

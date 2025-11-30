@@ -1,3 +1,5 @@
+// Set to 1 for single-line overwrite (PlatformIO, advanced terminals), 0 for multi-line (Arduino IDE)
+#define USE_CARRIAGE_RETURN 1
 // Required Libraries:
 // 1. FastLED (for WS2812B control)
 // 2. Wire (for I2C communication with MPU-6050)
@@ -219,14 +221,15 @@ void loop1()
   // 2. Show LEDs
   FastLED.show();
 
-  // 3. Serial Monitoring (MUST print on one line per frame)
+  // 3. Serial Monitoring (single-line or multi-line, depending on macro)
   static char ascii_visual[NUM_LEDS + 1]; // Static buffer for ASCII visualization
-  
   create_ascii_visualization(ascii_visual, sizeof(ascii_visual));
 
-  // Use carriage return '\r' to move the cursor to the beginning of the line
-  // and print without a newline to overwrite the previous line.
-  Serial.print('\r');
+#if USE_CARRIAGE_RETURN
+  Serial.print('\r'); // Overwrite line (works in PlatformIO, most terminals)
+#else
+  Serial.println(); // New line (works in Arduino IDE Serial Monitor)
+#endif
   Serial.print(g_sensor_connected ? "[H/W]" : "[SIM]");
   Serial.print(" Tilt (X): ");
   Serial.print(g_tilt_x, 2);
