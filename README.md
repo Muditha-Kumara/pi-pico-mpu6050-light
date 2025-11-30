@@ -54,9 +54,9 @@ An interactive dual-core LED "water flow" and tilt simulation for the Raspberry 
 ├── LICENSE             # Project license
 ```
 
-- `MotionLightPicoHat_Arduino/` contains an Arduino IDE-friendly `.ino` file for easy use. Open this folder and file directly in Arduino IDE for the same functionality as `src/main.cpp`.
+- `MotionLightPicoHat_Arduino/` contains an Arduino IDE-friendly [`.ino`](./MotionLightPicoHat_Arduino/MotionLightPicoHat_Arduino.ino) file for easy use. Open this folder and file directly in Arduino IDE for the same functionality as `src/main.cpp`.
 
-- `PCB/` contains all hardware design files: schematic, PCB layout, project settings, gerbers (in `PCB_Print/`), backups, and images.
+- `PCB/` contains all hardware design files: schematic, PCB layout, project settings, gerbers (in [`PCB_Print/`](./PCB/PCB_Print/)) and images.
 
 ## Hardware Requirements
 ## PCB Details
@@ -86,6 +86,8 @@ This project includes a custom PCB designed for the Raspberry Pi Pico, WS2812B L
 ![alt text](PCB/Assets/jlcpcb_Back.png)
 
 > _Images above: Top shows silkscreen labels and external connections; bottom shows Pico header, MPU-6050 footprint, and connectors._
+
+![alt text](PCB/Assets/image.png)
 
 ### Key Connections
 
