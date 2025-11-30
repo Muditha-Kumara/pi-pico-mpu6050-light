@@ -59,10 +59,56 @@ An interactive dual-core LED "water flow" and tilt simulation for the Raspberry 
 - `PCB/` contains all hardware design files: schematic, PCB layout, project settings, gerbers (in `PCB_Print/`), backups, and images.
 
 ## Hardware Requirements
+## PCB Details
+#### I2C Address Selection
+
+The PCB includes a J4 jumper, which can be used to select the I2C address of the MPU-6050 sensor. By bridging or leaving J4 open, you can choose between the two standard MPU-6050 I2C addresses (0x68 or 0x69). Refer to the silkscreen and schematic for the correct configuration for your sensor module.
+
+
+**Note:** The PCB is designed specifically for the original Raspberry Pi Pico (RP2040), not Pico 2. Pinout and mechanical fit are for the standard Pico board only.
+
+This project includes a custom PCB designed for the Raspberry Pi Pico, WS2812B LED strip, and MPU-6050 IMU. The PCB provides:
+
+- Direct Pico header footprint (solder Pico)
+- Onboard or external MPU-6050 support (I2C)
+- Dedicated LED strip connector (5V, GND, DIN)
+- 5V power input (max 5A) and distribution
+- Clear silkscreen labels for all connections
+
+### PCB Images
+
+**Top View (Silkscreen):**
+
+![alt text](PCB/Assets/jlcpcb_Front.png)
+
+**Bottom View (Component Side):**
+
+![alt text](PCB/Assets/jlcpcb_Back.png)
+
+> _Images above: Top shows silkscreen labels and external connections; bottom shows Pico header, MPU-6050 footprint, and connectors._
+
+### Key Connections
+
+- **External MPU-6050:**
+   - GND, VCC, SDA, SCL pins for external IMU module
+- **LED Connection:**
+   - 5VDC Out, Din (GPIO 22), GND for WS2812B strip
+- **5VDC In:**
+   - Main power input for LEDs and Pico
+- **Pico USB:**
+   - For programming and optional power
+
+### Assembly Notes
+
+- Ensure correct orientation of the Pico and all connectors.
+- Use the onboard or external MPU-6050 as needed.
+- Always connect GND between Pico, LED strip, and power supply.
+
+PCB design files and [Gerbers](./PCB/PCB_Print/pico-PCB(gbr).zip) are in the `PCB/` directory for manufacturing or modification.
 
 | Component | Purpose | Notes |
 |-----------|---------|-------|
-| Raspberry Pi Pico or Pico 2 | MCU | USB power + programming |
+| Raspberry Pi Pico| MCU | USB power + programming |
 | WS2812B LED strip (30 LEDs) | Visual effect | Data pin connected to GPIO 22 |
 | MPU-6050 IMU (optional) | Tilt sensing | I2C at `0x68` on GPIO 4 (SDA) and GPIO 5 (SCL) |
 | Power supply (5V recommended) | LED power | Ensure common ground with Pico |
