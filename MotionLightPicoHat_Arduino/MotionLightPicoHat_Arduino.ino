@@ -1,8 +1,10 @@
 // Set to 1 for single-line overwrite (PlatformIO, advanced terminals), 0 for multi-line (Arduino IDE)
 #define USE_CARRIAGE_RETURN 0
-// Required Libraries:
-// 1. FastLED (for WS2812B control)
-// 2. Wire (for I2C communication with MPU-6050)
+/*
+ * Board: Raspberry Pi Pico (RP2040, Earle Philhower)
+ * Boards Manager URL: https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
+ * Library: FastLED, Wire (for I2C communication with MPU-6050)
+ */
 #include <Arduino.h>
 #include <FastLED.h>
 #include <Wire.h>
@@ -19,6 +21,7 @@ const float BOUNCE_DAMPING = 0.85; // Velocity retention on bounce (0.0 to 1.0)
 const float MAX_VELOCITY = 1.0;    // Maximum speed of the water flow
 const float GLOW_DECAY = 0.5;      // Glow intensity decay rate
 const CRGB WATER_COLOR = CRGB::Blue;
+
 const int ASCII_STRIP_LENGTH = NUM_LEDS; // Length for Serial Monitor visualization
 
 // --- SHARED DATA (Accessed by both cores) ---
