@@ -19,7 +19,7 @@ An interactive dual-core LED "water flow" and tilt simulation for the Raspberry 
 *Pico 2 support uses the RP2350 chip. Logic and pin usage are identical. To enable, adjust `platformio.ini` and ensure the correct board/platform is selected.*
 
 > **Development Note:**
-> This project was requested for the original Raspberry Pi Pico (RP2040). However, all development and testing were performed on a Raspberry Pi Pico 2 (RP2350) board. The code is fully compatible with the normal Pico board and was written to ensure it works on both models. If you use a Pico 2, select the correct environment in `platformio.ini` or Arduino IDE as described above.
+> This project was requested for the original Raspberry Pi Pico (RP2040). However, all development and testing were performed on a Raspberry Pi Pico 2 (RP2350) board. The code is fully compatible with the normal Pico board and was written to ensure it works on both models. If you use a Pico 2, select the correct environment in [`platformio.ini`](./platformio.ini) or Arduino IDE as described above.
 
 ## Features
 
@@ -54,7 +54,7 @@ An interactive dual-core LED "water flow" and tilt simulation for the Raspberry 
 ├── LICENSE             # Project license
 ```
 
-- `MotionLightPicoHat_Arduino/` contains an Arduino IDE-friendly [`.ino`](./MotionLightPicoHat_Arduino/MotionLightPicoHat_Arduino.ino) file for easy use. Open this folder and file directly in Arduino IDE for the same functionality as [`src/main.cpp`](./src/main.cpp).
+- [`MotionLightPicoHat_Arduino/`](./MotionLightPicoHat_Arduino/.) contains an Arduino IDE-friendly [`.ino`](./MotionLightPicoHat_Arduino/MotionLightPicoHat_Arduino.ino) file for easy use. Open this folder and file directly in Arduino IDE for the same functionality as [`src/main.cpp`](./src/main.cpp).
 
 - [`PCB/`](./PCB/) contains all hardware design files: schematic, PCB layout, project settings, gerbers (in [`PCB_Print/`](./PCB/PCB_Print/)) and images.
 
