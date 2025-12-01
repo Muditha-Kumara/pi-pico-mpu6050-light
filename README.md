@@ -54,9 +54,9 @@ An interactive dual-core LED "water flow" and tilt simulation for the Raspberry 
 ├── LICENSE             # Project license
 ```
 
-- `MotionLightPicoHat_Arduino/` contains an Arduino IDE-friendly [`.ino`](./MotionLightPicoHat_Arduino/MotionLightPicoHat_Arduino.ino) file for easy use. Open this folder and file directly in Arduino IDE for the same functionality as `src/main.cpp`.
+- `MotionLightPicoHat_Arduino/` contains an Arduino IDE-friendly [`.ino`](./MotionLightPicoHat_Arduino/MotionLightPicoHat_Arduino.ino) file for easy use. Open this folder and file directly in Arduino IDE for the same functionality as [`src/main.cpp`](./src/main.cpp).
 
-- `PCB/` contains all hardware design files: schematic, PCB layout, project settings, gerbers (in [`PCB_Print/`](./PCB/PCB_Print/)) and images.
+- [`PCB/`](./PCB/) contains all hardware design files: schematic, PCB layout, project settings, gerbers (in [`PCB_Print/`](./PCB/PCB_Print/)) and images.
 
 ## Hardware Requirements
 ## PCB Details
@@ -79,15 +79,15 @@ This project includes a custom PCB designed for the Raspberry Pi Pico, WS2812B L
 
 **Top View (Silkscreen):**
 
-![alt text](PCB/Assets/jlcpcb_Front.png)
+[![alt text](PCB/Assets/jlcpcb_Front.png)](./PCB/Assets/jlcpcb_Front.png)
 
 **Bottom View (Component Side):**
 
-![alt text](PCB/Assets/jlcpcb_Back.png)
+[![alt text](PCB/Assets/jlcpcb_Back.png)](./PCB/Assets/jlcpcb_Back.png)
 
 > _Images above: Top shows silkscreen labels and external connections; bottom shows Pico header, MPU-6050 footprint, and connectors._
 
-![alt text](PCB/Assets/image.png)
+[![alt text](PCB/Assets/image.png)](./PCB/Assets/image.png)
 
 ### Key Connections
 
@@ -106,7 +106,7 @@ This project includes a custom PCB designed for the Raspberry Pi Pico, WS2812B L
 - Use the onboard or external MPU-6050 as needed.
 - Always connect GND between Pico, LED strip, and power supply.
 
-PCB design files and [Gerbers](./PCB/PCB_Print/pico-PCB(gbr).zip) are in the `PCB/` directory for manufacturing or modification.
+PCB design files and [Gerbers](./PCB/PCB_Print/pico-PCB(gbr).zip) are in the [`PCB/`](./PCB/.) directory for manufacturing or modification.
 
 | Component | Purpose | Notes |
 |-----------|---------|-------|
@@ -136,10 +136,10 @@ Optional: Adafruit MPU6050 library is **not required** because raw register read
 The code supports both single-line (overwriting) and multi-line serial output for compatibility with different serial monitors:
 
 - **Single-line output** (default, works in PlatformIO and most advanced terminals):
-   - Set `#define USE_CARRIAGE_RETURN 1` at the top of `src/main.cpp`.
+   - Set `#define USE_CARRIAGE_RETURN 1` at the top of [`src/main.cpp`](./src/main.cpp).
    - Output will always overwrite the same line, giving a live-updating effect.
 - **Multi-line output** (for Arduino IDE Serial Monitor):
-   - Set `#define USE_CARRIAGE_RETURN 0` at the top of `src/main.cpp`.
+   - Set `#define USE_CARRIAGE_RETURN 0` at the top of [`src/main.cpp`](./src/main.cpp).
    - Each update prints on a new line (Arduino IDE Serial Monitor does not support carriage return overwrite).
 
 **How to switch:**
@@ -148,7 +148,7 @@ The code supports both single-line (overwriting) and multi-line serial output fo
 #define USE_CARRIAGE_RETURN 1 // or 0 for Arduino IDE
 ```
 
-This macro is at the top of `src/main.cpp`. Change it as needed for your environment.
+This macro is at the top of [`src/main.cpp`](./src/main.cpp). Change it as needed for your environment.
 
 ## Dual-Core Flow Overview
 
@@ -165,7 +165,7 @@ Synchronization uses simple `volatile` variables (`g_tilt_x`, `g_sensor_connecte
 
 - PlatformIO Core or VS Code + PlatformIO extension installed
 
-### 2. Key `platformio.ini` Excerpt
+### 2. Key [`platformio.ini`](./platformio.ini) Excerpt
 
 ```ini
 [env:pico_official]
@@ -221,7 +221,7 @@ You will see a single updating line like:
    - `https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json`
 3. Boards Manager: install "RP2040" (Earle Philhower).
 4. Board: Tools → Board → Raspberry Pi RP2040 Boards → Raspberry Pi Pico (or Pico 2).
-5. Open `MotionLightPicoHat_Arduino/MotionLightPicoHat_Arduino.ino` directly in Arduino IDE (recommended), or copy code from `src/main.cpp` if you want to create your own sketch. Both files are kept in sync and provide the same functionality (including dual-core support with `setup1()` / `loop1()`).
+5. Open [`MotionLightPicoHat_Arduino/MotionLightPicoHat_Arduino.ino`](./MotionLightPicoHat_Arduino/MotionLightPicoHat_Arduino.ino) directly in Arduino IDE (recommended), or copy code from [`src/main.cpp`](./src/main.cpp) if you want to create your own sketch. Both files are kept in sync and provide the same functionality (including dual-core support with `setup1()` / `loop1()`).
 6. Library Manager: install FastLED.
 7. Upload:
    - Default: Hold BOOTSEL, plug in, then Upload.
@@ -272,7 +272,7 @@ You will see a single updating line like:
 Add your chosen license (e.g., MIT, Apache-2.0) here. Example MIT header:
 
 ```text
-Copyright (c) 2025 <Your Name>
+Copyright (c) 2025 <Muditha Chinthana Kumara>
 Permission is hereby granted, free of charge, to any person obtaining a copy...
 ```
 
